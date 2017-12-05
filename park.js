@@ -2,6 +2,10 @@ const Park = function() {
  this.enclosure = [];
 }
 
+Park.prototype.quantity = function() {
+ return this.enclosure.length;
+}
+
 Park.prototype.add = function(dinosaur) {
  this.enclosure.push(dinosaur);
 }

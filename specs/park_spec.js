@@ -14,19 +14,19 @@ describe('Park', function() {
   })
 
  it('should have an enclosure', function() {
-   assert.strictEqual(park.enclosure.length, 0);
+   assert.strictEqual(park.quantity(), 0);
  })
 
  it('should be able to add dinosaur', function () {
   park.add(dinosaur1);
-  assert.strictEqual(park.enclosure.length, 1);
+  assert.strictEqual(park.quantity(), 1);
  })
 
  it('should be able remove dinosaur by type', function () {
   park.add(dinosaur1);
   park.add(dinosaur2);
   park.remove('Tyrannosaurus');
-  assert.strictEqual(park.enclosure.length, 1);
+  assert.strictEqual(park.quantity(), 1);
  })
 
  it('should get all dinosaurs with an offspring of 2 or higher', function () {
