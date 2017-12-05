@@ -1,7 +1,7 @@
 const Dinosaur = require('../dinosaur.js');
 const assert = require('assert');
 
-describe('dinosaur', function() {
+describe('Dinosaur', function() {
 
  it('should have a type', function() {
   const dinosaur = new Dinosaur('Tyrannosaurus', 2);

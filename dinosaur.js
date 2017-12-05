@@ -1,4 +1,6 @@
-const Dinosaur = function(options) {
- this.type = options['type'];
- this.offsprings options['offsprings'];
+const Dinosaur = function(type, offsprings) {
+ this.type = type;
+ this.offsprings = offsprings;
 }
+
+module.exports = Dinosaur;
