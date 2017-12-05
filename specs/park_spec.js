@@ -35,4 +35,11 @@ describe('Park', function() {
   park.add(dinosaur3);
   assert.strictEqual(park.countDinosaurGivenOffspring(2), 2)
  })
+
+ it('should get number of dinosaurs given the year', function () {
+  park.add(dinosaur1);
+  park.add(dinosaur2);
+  park.add(dinosaur3);
+  assert.strictEqual(park.countDinosaursGivenYear(2), 14);
+ })
 })
