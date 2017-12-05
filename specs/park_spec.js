@@ -40,6 +40,6 @@ describe('Park', function() {
   park.add(dinosaur1);
   park.add(dinosaur2);
   park.add(dinosaur3);
-  assert.strictEqual(park.countDinosaursGivenYear(2), 14);
+  assert.strictEqual(park.countDinosaursGivenYear(2), 25);
  })
 })
