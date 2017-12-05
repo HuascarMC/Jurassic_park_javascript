@@ -8,9 +8,9 @@ describe('Park', function() {
 
   beforeEach(function() {
    park = new Park();
-   dinosaur1 = new Dinosaur('Tyrannosaurus');
-   dinosaur2 = new Dinosaur('Velociraptor');
-   dinosaur3 = new Dinosaur('Triceratops');
+   dinosaur1 = new Dinosaur('Tyrannosaurus', 3);
+   dinosaur2 = new Dinosaur('Velociraptor', 7);
+   dinosaur3 = new Dinosaur('Triceratops', 1);
   })
 
  it('should have an enclosure', function() {
@@ -27,5 +27,12 @@ describe('Park', function() {
   park.add(dinosaur2);
   park.remove('Tyrannosaurus');
   assert.strictEqual(park.enclosure.length, 1);
+ })
+
+ it('should get all dinosaurs with an offspring of 2 or higher', function () {
+  park.add(dinosaur1);
+  park.add(dinosaur2);
+  park.add(dinosaur3);
+  assert.strictEqual(park.countDinosaurGivenOffspring(2), 2)
  })
 })
