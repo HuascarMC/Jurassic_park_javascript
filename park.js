@@ -24,4 +24,13 @@ Park.prototype.countDinosaurGivenOffspring = function(NumberOffsprings) {
  return count;
 }
 
+Park.prototype.countDinosaursGivenYear = function(year) {
+ count = 0;
+ for (var dinosaur of this.enclosure) {
+  count++;
+  count += (dinosaur.offspring * year);
+ }
+ return count;
+}
+
 module.exports = Park;
