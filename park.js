@@ -14,4 +14,14 @@ Park.prototype.remove = function(type) {
  }
 }
 
+Park.prototype.countDinosaurGivenOffspring = function(NumberOffsprings) {
+ count = 0;
+ for (var dinosaur of this.enclosure) {
+  if (dinosaur.offsprings >= NumberOffsprings) {
+    count += 1;
+  }
+ }
+ return count;
+}
+
 module.exports = Park;
