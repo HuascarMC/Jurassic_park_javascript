@@ -7,13 +7,13 @@ describe('Park', function() {
   let dinosaur;
 
   beforeEach(function() {
-   const Park = new Park();
-   const dinosaur1 = new Dinosaur('Tyrannosaurus');
-   const dinosaur2 = new Dinosaur('Velociraptor');
-   const dinosaur3 = new Dinosaur('Triceratops');
+   park = new Park();
+   dinosaur1 = new Dinosaur('Tyrannosaurus');
+   dinosaur2 = new Dinosaur('Velociraptor');
+   dinosaur3 = new Dinosaur('Triceratops');
   })
 
  it('should have an enclosure', function() {
-   assert.strictEqual(Park.enclosure.length, 0);
+   assert.strictEqual(park.enclosure.length, 0);
  })
 })
